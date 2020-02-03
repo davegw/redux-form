@@ -2010,10 +2010,10 @@ const describeReduxForm = (name, structure, combineReducers, setup) => {
 
       expect(deepFooInputRender).toHaveBeenCalled()
       expect(deepFooInputRender).toHaveBeenCalledTimes(1)
-      
+
       expect(helloInputRender).toHaveBeenCalled()
       expect(helloInputRender).toHaveBeenCalledTimes(1)
-      
+
 
       // Reinitialize the form
       const initButton = TestUtils.findRenderedDOMComponentWithTag(
@@ -5683,7 +5683,7 @@ const describeReduxForm = (name, structure, combineReducers, setup) => {
       }
 
       class Form extends Component {
-        componentWillMount() {
+        UNSAFE_componentWillMount() {
           this.props.initialize({ foo: 'Initialized' })
         }
 

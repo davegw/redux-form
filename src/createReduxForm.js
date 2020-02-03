@@ -522,7 +522,7 @@ const createReduxForm = (structure: Structure<*, *>) => {
           }
         }
 
-        componentWillMount() {
+        UNSAFE_componentWillMount() {
           if (!isHotReloading()) {
             this.initIfNeeded()
             this.validateIfNeeded()
@@ -534,7 +534,7 @@ const createReduxForm = (structure: Structure<*, *>) => {
           )
         }
 
-        componentWillReceiveProps(nextProps: Props) {
+        UNSAFE_componentWillReceiveProps(nextProps: Props) {
           this.initIfNeeded(nextProps)
           this.validateIfNeeded(nextProps)
           this.warnIfNeeded(nextProps)

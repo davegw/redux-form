@@ -46,7 +46,7 @@ const createConnectedFields = (structure: Structure<*, *>) => {
         this.onBlurFns[name] = event => this.handleBlur(name, event)
       })
 
-    componentWillReceiveProps(nextProps: Props) {
+    UNSAFE_componentWillReceiveProps(nextProps: Props) {
       if (
         this.props.names !== nextProps.names &&
         (size(this.props.names) !== size(nextProps.names) ||
